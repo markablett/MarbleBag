@@ -1,2 +1,7 @@
-# MarbleBag
-Project to explore the implementation of a marble bag method for calculating probability
+# Marble Bag Probability
+Project to explore the implementation of the marble bag method for calculating probability. 
+
+I learned of this technique for emulating probability in a way that fells more "fair" for a player by rationing out the probability of something occurring  (such as a critical hit) instead of using fractions. Using a marble bag you are guaranteeing a success within certain bounds, where as with fractions, the player could be unlucky and fail more times than expected. For example, if you have a 25% chance to critical hit a player would expect to crit 1 in 4 attacks, but using fractions to calculate this does not guarantee this as each attack crit chance is calculated individually. 
+
+## How does it work?
+I created a list that acted as the "Marble bag", the contents of the list represent marbles. Each marble represents a critical or non-critical hit when attacking. Each time an attack is made by the player a marble is removed from the list. When the list is empty, it is reinitialised so more marbles can be taken. I have created a simple pygame project to test this method. Pressing the Space bar will make an "Attack" and calculate damage. A red damage box indicates a critical hit. You will notice that critical hits occur much more regularly and predictably than using the fractional probability method. Adding more marbles will increase variance while still keeping the regularity. 
