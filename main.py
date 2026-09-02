@@ -39,12 +39,12 @@ def attack():
     if length == 0:
         attackCritBag = [1, 1, 0, 0, 0, 0, 0, 0]
         
-    # Get random marble from the critical hit chance marble bag if there are more than one marbles in the bag
+    # Get random marble from the critical hit chance marble bag if there is more than one marble in the bag
     critBagIndex = 0
     if  length > 1:
         critBagIndex = random.randrange(0, length - 1)
 
-    # Set if this attack is a crit using the marble selected
+    # Use marble to determine if this hit is a critical hit
     isCrit = attackCritBag[critBagIndex]
     
     # Remove the marble from the bag
