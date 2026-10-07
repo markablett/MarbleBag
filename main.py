@@ -38,6 +38,7 @@ def attack():
     # Reset the marble bag if it's empty
     if length == 0:
         attackCritBag = [1, 1, 0, 0, 0, 0, 0, 0]
+        length = len(attackCritBag)
         
     # Get random marble from the critical hit chance marble bag if there is more than one marble in the bag
     critBagIndex = 0
